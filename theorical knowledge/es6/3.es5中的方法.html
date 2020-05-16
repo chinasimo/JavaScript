@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 遍历数组/迭代数组
+        // 1.forEach的用法arr.forEach(function(currentvalue,index,array){})
+        // var arr = [1, 2, 3];
+        // var sum = 0;
+        // arr.forEach(function(value, index, array) {
+        //     console.log('遍历数组的值' + value);
+        //     console.log('遍历数组的索引号' + index);
+        //     console.log('遍历数组本身' + array);
+        //     sum += value;
+        // })
+        // console.log(sum);
+
+        // 2.filter 主要用来筛选数组; 创建了一个新的数组;返回的也是一个数组
+        //  语法arr.filter(function(currentvalue,index,array){})
+        // var arr = [66, 77, 88, 40, 2];
+        // var newArr = arr.filter(function(value, index) {
+        //     return value % 2 === 0;
+        // })
+        // console.log(newArr);
+
+        // 3.some 返回的是一个布尔值;查找到第一个复合的就会终止;filter是找到所有
+        var arr = [1, 2, 3, 'pink'];
+        var newArr = arr.some(function(value) {
+            return value == 'pink';
+        })
+        console.log(newArr);
+    </script>
+
+</body>
+
+</html>

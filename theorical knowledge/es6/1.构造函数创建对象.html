@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一
+
+        // 1.用new object创建对象
+        var obj1 = new Object();
+        // 2.利用字面量创建对象
+        var obj2 = {};
+        // 3.构造函数创建对象
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+
+        }
+        star.prototype.sing = function() {
+                console.log('l can sing');
+
+            }
+            // 实例化对象
+        var ldh = new Star('andy', '18');
+        console.log('ldh');
+        ldh.sing;
+        // 二
+
+        // 实例成员构造函数通过this添加的成员 属性、方法都是成员
+        // 只能通过实例对象才能访问
+        // 静态成员 在构造函数本身的成员
+        // star.age = 10;
+
+        // 三
+        // 存在浪费对象问题
+        // 地址不同  浪费空间
+
+        // 四
+        // prototype对象（原型对象）通过这个分配的是共享的 
+        // 把不变的方法放在这个身上
+        // 一般公共属性放在对象里面，公共方法就放在prototype里面
+
+        // 五\构造函数constructor；Star.prototype.sing这个.sing是添加这个方法而给对象赋值那就会重绘
+        // Star.prototype = {
+        //         constructor: Star;
+        //         sing: function() {
+        //             console.log();
+
+        //         }
+        //     }
+        // 六构造函数 Prottoype原型对象  实例对象关系
+
+        // 七原型链
+
+        // 八成员查找机制
+
+        // 九this指向问题
+
+        // 重点:原型对象 扩展内置对象
+        console.log(Araay.prototype);
+
+        Araay.prototype.sum = function() {
+            var sum = 0;
+            for (var i = 0; i <= sum.length; i++) {
+                // sum = sum + this[1];
+                sum += this[i];
+            }
+            return sum;
+        }
+        var arr = [1, 2, 3];
+        console.log(arr.sum());
+    </script>
+
+
+
+</body>
+
+</html>

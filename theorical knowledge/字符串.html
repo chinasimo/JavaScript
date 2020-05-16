@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*   // 转化为字符型
+                                                                                                                                                                                                                                                                // 第一种方式toString
+                                                                                                                                                                                                                                                                var num = 10;
+                                                                                                                                                                                                                                                                var str = num.toString()
+                                                                                                                                                                                                                                                                console.log(str);
+                                                                                                                                                                                                                                                                // 第二种方式string(num)
+                                                                                                                                                                                                                                                                var num = 10;
+                                                                                                                                                                                                                                                                var str = String(num);
+                                                                                                                                                                                                                                                                console.log(str);
+                                                                                                                                                                                                                                                                // 第三种方式加个字符串的形式
+                                                                                                                                                                                                                                                                var num = 10;
+                                                                                                                                                                                                                                                                var str = num + '';
+                                                                                                                                                                                                                                                                console.l
+                                                                                                                                                                                                                                                                // 转化为数字型
+                                                                                                                                                                                                                                                                var age = prompt('好好学习天天向上');
+                                                                                                                                                                                                                                                                console.log(parseIn console.log(parseInt(3)); console.log(parseFloat
+                                                                                                                                                                                                                                                                 // 案例js隐试转换
+                                                                                                                                                                                                                                                                 var born = prompt('请输入您的出生年份');
+                                                                                                                                                                                                                                                                 var age = 2020 - born; alert('您的年纪是' + age + '岁了'); */
+
+        // 案例加法
+        /*  var first = prompt('请输入第一个值');
+        var second = prompt('请输入第二个值');
+        var add = parseFloat(first) + parseFloat(second);
+        alert(add);*/
+
+
+        // 交换两个变量的值
+        // 首先，1号盒子变量赋值1，2号同理，3号空盒子；
+        // 然后，1号赋值放入3,2放入1,3再放入2
+        var num1 = 1;
+        var num2 = 2;
+        var change = num1;
+        num1 = num2;
+        num2 = change;
+        console.log(num1);
+        console.log(num2);
+
+        // 姓名、年龄、性别
+        var name = prompt('您的姓名是：');
+        var year = prompt('您年龄是：');
+        var gender = prompt('您的性别是：');
+        alert('您的姓名是：' + name + '您年龄是：' + year + '您的性别是：' + gender);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

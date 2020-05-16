@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 之前没有es6的extend,都是用构建函数和原型对象(原型是个对象)来模拟继承的
+
+        // 一.call(指向的对象--1.调用函数2.改变this指向 ,实参一号,实参二号...)
+        // function obj(x, y) {
+        //     console.log(this);
+        //     console.log(x + y);
+        // }
+        // var o = {
+        //     name: 'andy',
+        //     age: '18',
+        // }
+        // obj.call(o, 1, 2)
+
+        // 二.借用父构造函数继承属性
+        // 1.父构造函数
+        function Father(uname, age, score) {
+            // 这个this指向父构造函数实例
+            this.uname = uname;
+            this.age = age;
+            this.score = score;
+        }
+        // 2.子构造函数
+        function Son(uname, age) {
+            // this指向子构造函数对象实例
+            Father.call(this, uname, age);
+        }
+        Father.prototype = new Father();
+        Son.prototype.exam = function() {
+            console.log('test');
+
+        };
+        var son = new Son('刘德华', '18', '100');
+        console.log(son);
+
+        // 三.用原型对象来让子构造对象继承属性
+    </script>
+</body>
+
+</html>
