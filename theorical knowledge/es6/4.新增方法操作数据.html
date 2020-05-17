@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 80px auto 10px;
+            text-align: center;
+        }
+        
+        table {
+            margin: 20px auto;
+            border: 1px;
+        }
+        
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid pink;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        table thead th:nth-child(1) {
+            padding: 0 10px;
+        }
+        
+        table thead th:nth-child(2) {
+            padding: 0 100px;
+        }
+        
+        table thead th:nth-child(3) {
+            padding: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 查询模块 -->
+    <div>
+        按照价格查询<input type="text" class="start">—<input type="text" class="end">
+        <button class="search_price">搜索</button>按照名称查询
+        <input type="text" class="product"><button class="search_pro
+        ">查询</button>
+    </div>
+
+    <!-- 表格模块 -->
+    <table>
+        <thead>
+            <th>id</th>
+            <th>产品名称</th>
+            <th>价格</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var date = [{
+                id: 1,
+                pname: '小米',
+                price: 1999,
+            }, {
+                id: 2,
+                pname: '大米',
+                price: 2999,
+            }, {
+                id: 3,
+                pname: '红米',
+                price: 3999,
+            }, {
+                id: 4,
+                pname: '白米',
+                price: 4999,
+            }, ]
+            // 1.获取元素
+        var tbody = document.querySelector('tbody');
+        var start = document.querySelector('.start');
+        var end = document.querySelector('.end');
+        var search_price = document.querySelector('.search_price');
+        var product = document.querySelector('.product');
+        var search_pro = document.querySelector('.search_pro');
+        setDate(date);
+        // 2.渲染date数据到tbody
+        function setDate(mydate) {
+            tbody.innerHTML = '';
+            mydate.forEach(function(value) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = '<td>' + value.id + '</td><td>' + value.pname + '</td><td>' + value.price + '</td>';
+                tbody.append(tr);
+            });
+        }
+
+        // 3.用filter来做查询价格
+        search_price.addEventListener('click', function() {
+                var newDate = date.filter(function(value) {
+                    return value.price >= start.value && value.price <= end.value;
+                });
+                console.log(newDate);
+                setDate(newDate);
+            })
+            // 4.用some来做产品查询
+        search_pro.addEventListener('click', function() {
+            var arr = [];
+            date.some(function(value) {
+                    if (value.pname === product.value) {
+                        arr.push(value);
+                        return true;
+                    }
+                })
+                // 拿到的数据渲染在页面
+            setDate(arr);
+        })
+    </script>
+</body>
+
+</html>
