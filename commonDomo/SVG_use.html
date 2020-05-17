@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Mrbool.com - HTML5 Tutorials</title>
+</head>
+
+<body>
+	<!-- 　　SVG 即 Scalable Vector Graphics，是一种用来绘制矢量图的 HTML5 标签。你只需定义好XML属性，就能获得一致的图像元素。
+	SVG多边形
+	<path> 标签用来定义路径。
+	M = moveto
+	L = lineto
+	H = horizontal lineto
+	V = vertical lineto
+	C = curveto
+	S = smooth curveto
+	Q = quadratic Belzier curve
+	T = smooth quadratic Belzier curveto
+	A = elliptical Arc
+	Z = closepath
+	以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+	在 SVG 中，可用的滤镜有：
+	feBlend feColorMatrix feComponentTransfer feComposite feConvolveMatrix feDiffuseLighting feDisplacementMap feFlood feGaussianBlur feImage feMerge feMorphology feOffset feSpecularLighting feTile feTurbulence feDistantLight fePointLight feSpotLight 注释：您可以在每个 SVG 元素上使用多个滤镜
+	-->
+	<style>
+	#svg {
+		width: 600px;
+		height: 600px;
+		border: 2px solid #000;
+	}
+	#svg line {
+		stroke: red;
+		stroke-width:2px;
+	}
+	#svg circle {
+		cx:60;
+		fill: #f90;
+	}
+	/* long {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		background-color: #ccc;
+	}
+	line {
+		display: block;
+		width: 200px;
+		height: 200px;
+	}*/
+
+	</style>
+	<h2>HTML5 SVG Line Example</h2>
+	<!-- <long class="long"></long> -->
+
+	<!-- <svg>
+		<line x1="0" y1="0" x2="50" y2="200" style="stroke:rgb(100,100,0);stroke-width:5" />
+	</svg> -->
+	<!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"></svg> -->
+	<svg id="svg"><!-- xmlns="http://www.w3.org/2000/svg" -->
+		<!-- <text x="0" y="15" fill="red">I love SVG</text> -->
+		<line x1="10" y1="20" x2="100" y2="200"/>
+		<circle id="myCircle" cx="55" cy="55" r="50" fill="#219E3E" stroke="#17301D" stroke-width="2" />
+		<!-- <rect x="10" y="20" id="myRectangle" width="150px" height="100px" stroke="#17301D" stroke-width="2"  fill="#0E4E75" fill-opacity="0.5" stroke-opacity="0.5"/> -->
+		<!-- <ellipse id="myEllipse" cx="120" cy="60" rx="100" ry="80" style="fill:#3F5208;stroke:black;stroke-width:3"/> -->
+		<!-- <polygon id="myPolygon" points="10,10 75,150 150,60" style="fill:#63BCF7;stroke:black;stroke-width:3"/> -->
+		<!-- <polyline points="0,0 0,20 20,20 40,40 40,60" style="fill:white;stroke:red;stroke-width:2"/> -->
+		<path d="M153 334
+		C153 334 151 334 151 334
+		C151 339 153 344 156 344
+		C164 344 171 339 171 334
+		C171 322 164 314 156 314
+		C142 314 131 322 131 334
+		C131 350 142 364 156 364
+		C175 364 191 350 191 334
+		C191 311 175 294 156 294
+		C131 294 111 311 111 334
+		C111 361 131 384 156 384
+		C186 384 211 361 211 334
+		C211 300 186 274 156 274"
+		style="fill:white;stroke:red;stroke-width:2"/>
+		<path d="M153 334 C153 334 151 334 151 334 C171 322 164 314 156 314 C142 314 131 322 131 334" style="fill:blue;stroke:red;stroke-width:2" />
+		<path d="M153 334 L253 434 L53 434 Z" />
+		<defs>
+			<linearGradient id="orange_red" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" style="stop-color:rgb(255,255,0);
+			stop-opacity:1"/>
+			<stop offset="100%" style="stop-color:rgb(255,0,0);
+			stop-opacity:1"/>
+			</linearGradient>
+		</defs>
+		<ellipse cx="200" cy="190" rx="85" ry="55" style="fill:url(#orange_red)" />
+		<!-- <defs>
+			<radialGradient id="grey_blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(200,200,200);
+		stop-opacity:0" />
+				<stop offset="100%" style="stop-color:rgb(0,0,255);
+		stop-opacity:1" />
+			</radialGradient>
+		</defs>
+		<ellipse cx="230" cy="200" rx="110" ry="100" style="fill:url(#grey_blue)" /> -->
+	</svg>
+	<!-- 星星 -->
+    <!-- <svg viewBox="0 0 1000 800" style="background:red">
+        <polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427"></polygon>
+    </svg>
+    <svg viewBox="0 0 1000 800">
+        <polygon points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+    </svg>
+    <svg viewBox="0 0 1000 800" style="display:">
+        <defs>
+            <linearGradient id="star" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FCF0BC"></stop>
+                <stop offset="0%" stop-color="#FCF0BC"></stop>
+            </linearGradient>
+        </defs>
+        <polygon style="fill: url(#star);" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+    </svg> -->
+	<!-- <canvas width=100 height=100 id="square" fill="#f00"></canvas> -->
+</body>
+<script>
+//myPolygon.style.fill="#f00";
+</script>
+
+</html>

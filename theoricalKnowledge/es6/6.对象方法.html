@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.object.keys(obj)得到一组数组以属性为单元的形式
+        // var obj = {
+        //     id: 1,
+        //     name: 'andy',
+        //     age: 18,
+        // }
+        // var arr = Object.keys(obj);
+        // console.log(arr);
+        // arr.forEach(function(value) {
+        //     console.log(value);
+
+        // })
+
+        // 2.对象方法object.defineProperty{obj,property,description}三个都是必须的
+        var obj = {
+                id: 1,
+                name: 'andy',
+                age: 18,
+            }
+            // 2.1过去的办法
+        obj.eye = ' big';
+        obj.id = 2;
+        // 2.2现在的办法
+        Object.defineProperty(obj, 'age', {
+                value: 22
+            })
+            // 2.3writable:false不需修改这个属性
+        Object.defineProperty(obj, 'id', {
+            writable: false
+        })
+        obj.id = 100;
+        // enumerabel:false遍历无效
+        // configurabel:不能修改
+
+
+
+        console.log(obj);
+    </script>
+
+</body>
+
+</html>
