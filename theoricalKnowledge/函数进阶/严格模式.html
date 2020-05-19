@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.开启严格模式 // 
+        // 1.1以下代码就会使严格模式
+        "use strict";
+        //    1.2.立即执行函数
+        (function() {
+            "use strict"
+        })();
+        // 1.3.函数里面使用严格执行
+        function stric() {
+            "use strict"
+        }
+        fn.stric();
+
+        // 2.变量规定
+        // 必须用var先声明，严禁删除已经声明好的变量
+        // this不再是指向window而是undefined
+
+        // 3.this指向问题
+        // 构造函数不加上new会报错,
+        // 在普通的情况下,不用new只是当一个普通函数
+
+        // 4.函数变化
+        // 严格模式参数不能同名
+        // 函数声明必须在最上层
+        // 像if(true){
+        //     function(){}
+        // }不行不合法
+    </script>
+</body>
+
+</html>

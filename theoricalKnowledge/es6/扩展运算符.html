@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ...这三个点可以把数组和对象,转化成用逗号分隔的参数序列
+        // let ary = [1, 2, 3];
+        // ...ary 1,2,3
+        // console.log(...ary);这里是1 2 3没有逗号
+
+
+        // 可以用于合并数组
+        // 方法一
+        // let arr1 = [1, 2];
+        // let arr2 = [3, 4];
+        // let arrsum = [...arr1, ...arr2];
+        // console.log(arrsum);
+        // 方法二
+        // ary1.push(...ary2);
+
+        // 可用于将类数组或可遍历对象转化成真正的数组
+        // 方法一
+        // let oDivs = document.getElementsByTagName('div');(getElementsByTagName通过标签名获取)
+        // oDivs = [...oDivs];
+
+        // 方法二构造函数方法 把这些数值整合转化为真正数组
+        // Array.from()
+        // let test = {
+        //     'a': 1,
+        //     'b': 2,
+        //     lenght: 2,
+        // };
+        // let arr2=Array.from(test)
+
+        // let arr3 = Array.from(test, item >= item * 2);输出2和4
+
+
+        // 实例方法find()用于找出第一个复合条件的数组成员 找不到返回undefined
+        // let demo = [{
+        //     id: 1,
+        //     age: 18,
+        // }, {
+        //     id: 2,
+        //     age: 22,
+        // }];
+        // let target = demo.find((item, index) => item.id == 2);
+
+        // findIndex()用于找复合条件数组成员的位置 找不到返回-;
+        // let target2 = demo.findIndex((item, index) => item.id === 2);
+        // console.log(target2);
+
+        // includes()数组是否包含给定 返回的是布尔值
+        // let demo = ['a', 'b'];
+        // console.log(demo.includes('a'));
+
+
+        // 模板字符串 创建字符串的方法,使用反引号定义,
+        // let name = `张三`;
+        // console.log(name);
+        // 可以解析变量{}用大括号
+        // let sayName = `hello, ${name}`;
+        // console.log(sayName);
+        // 可以调用函数
+        // let fun = function() {};
+        // let demo = `卧槽${fn}`;
+
+
+        // startWith() and endWith()判断参数是否载原字符串的开头或者结尾
+
+        // repeat()方法   括号内是重复次数
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.边界符 开头结尾
+        var rg = /^abc$/;
+
+        // 2.字符类[]可供选择// 只需要包含其中一个就是true 
+        var rg = /[abc]/;
+        // 只能包含其中一个才true
+        var reg = /^[abc]$/;
+        //  a到z都可以
+        var reg1 = /^[a-z]$/;
+        // 字符组合
+        var reg2 = /^[a-zA-Z0-9]$/;
+
+        // 3.注意^[]里面就是取反不能取这些
+        var reg3 = /^[^a-z]$/;
+
+        // 4.量次符号
+        // 4.1*0次或者多次
+        var regular1 = /^a*$/;
+        // 4.2+1次或者多次
+        var regular2 = /^a+$/;
+        // 4.3?0次或这1次
+        var regular3 = /^a?$/;
+        // 4.4{n}n次数
+        var regular4 = /^a{3}$/
+            // 4.5{n,}n+次
+        var regular5 = /^a{3,}$/
+            // 4.6{n,m}n到m次
+        var regular6 = /^a{3,6}$/
+    </script>
+</body>
+
+</html>
