@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- gulp.src()获取
+    gulp.task()建立
+    gulp.dest()输出
+    gulp.watch()监控文件变化 -->
+    <script>
+        const gulp = require('gulp');
+        // gulp.task建立任务
+        gulp.task('first', () => {
+            console.log('first市名称,后面加个回调函数');
+            // 获取要处理文件
+            //    gulp.src (地址);
+            // 处理后的文件输入目录
+            // .pipe(gulp.dest(地址))
+        });
+    </script>
+</body>
+
+</html>

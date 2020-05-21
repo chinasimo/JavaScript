@@ -18,6 +18,17 @@
 
 
         // 重点:::::A模块成员导出,B模块成员导入
+        // 在A模块文件
+        // const add = (num1, num2) => num1 + num2;
+        // exports.add = add;
+        // 在B模块
+        //    const add1= require(./文件位置);
+        //    console.log(add1.add(1,2));
+
+        // 第二种导出导入方法
+        // module.exports.version = version;
+        // module.exports.sayHi = sayHi;
+        // 以module.exports为准
     </script>
 </body>
 
